@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  gap: 19.2rem;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+main button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.numbers {
+  display: flex;
+  font-size: 12.6rem;
+  line-height: 15rem;
+  margin-bottom: 1rem;
+  color: #323238;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+}
+
+.moods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.play:active,
+.stop:active,
+.add-minutes:active,
+.sub-minutes:active,
+.forest:active,
+.rain:active,
+.coffeeshop:active,
+.fire:active {
+  transform: scale(0.98);
+}
