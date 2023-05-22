@@ -27,23 +27,29 @@ main {
   margin-bottom: 10rem;
 }
 
-main button {
+header {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.numbers {
-  display: flex;
-  font-size: 12.6rem;
-  line-height: 15rem;
-  margin-bottom: 1rem;
-  color: #323238;
-}
-
 .controls {
   display: flex;
   gap: 4rem;
+}
+
+.numbers {
+  display: flex;
+  font-size: clamp(4.3rem, 6.3rem + 15vw, 12.6rem);
+  line-height: 15rem;
+  margin-bottom: 1rem;
+  color: #323238;
 }
 
 .moods {
@@ -62,4 +68,23 @@ main button {
 .coffeeshop:active,
 .fire:active {
   transform: scale(0.98);
+}
+
+
+/*DARKMODE*/
+.darkmode {
+  background: #121214;
+  color: #FFF;
+}
+
+.firstsvg path:nth-child(1) {
+  fill: #29292E;
+}
+
+.firstsvg path:nth-child(2) {
+  fill: #FFF;
+}
+
+.whitecontrol svg path {
+  fill: #FFF;
 }

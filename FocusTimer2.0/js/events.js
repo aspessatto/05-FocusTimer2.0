@@ -14,8 +14,11 @@ import {
   svgCoffeeshopOff,
   svgCoffeeshopOn,
   svgFireOff,
-  svgFireOn
+  svgFireOn,
+  buttonLightMode,
+  buttonDarkMode,
   } from './config.js'
+import { changeMode } from './darkmode.js';
 
 
 export function Events (
@@ -23,52 +26,60 @@ timer,
 sounds,
 ) {
 
-  buttonPlay.addEventListener('click', function () {
+  buttonPlay.addEventListener('click', () => {
     timer.countdown()
     buttonPlay.disabled = true;
     sounds.pressButton()
   })
 
-  buttonStop.addEventListener('click', function () {
+  buttonStop.addEventListener('click', () => {
     timer.resetTimer()
     buttonPlay.disabled = false;
     sounds.pressButton()
   })
 
-  buttonAddMinutes.addEventListener('click', function () {
+  buttonAddMinutes.addEventListener('click', () => {
     timer.addMinutes()
     sounds.pressButton()
   })
 
-  buttonSubMinutes.addEventListener('click', function () {
+  buttonSubMinutes.addEventListener('click', () => {
     timer.subMinutes()
     sounds.pressButton()
   })
 
-  buttonForest.addEventListener('click', function () {
+  buttonForest.addEventListener('click', () => {
     sounds.togglePlay(sounds.forestAudio)
     svgForestOff.classList.toggle('hide')
     svgForestOn.classList.toggle('hide')
   })
 
-  buttonRain.addEventListener('click', function() {
+  buttonRain.addEventListener('click', () => {
     sounds.togglePlay(sounds.rainAudio)
     svgRainOff.classList.toggle('hide')
     svgRainOn.classList.toggle('hide')
   })
 
-  buttonCoffeeshop.addEventListener('click', function() {
+  buttonCoffeeshop.addEventListener('click', () => {
     sounds.togglePlay(sounds.coffeeAudio)
     svgCoffeeshopOff.classList.toggle('hide')
     svgCoffeeshopOn.classList.toggle('hide')
   })
   
-  buttonFire.addEventListener('click', function() {
+  buttonFire.addEventListener('click', () => {
     sounds.togglePlay(sounds.fireAudio)
     svgFireOff.classList.toggle('hide')
     svgFireOn.classList.toggle('hide')
   })
+
+  buttonLightMode.addEventListener('click', () => {
+    changeMode()
+    sounds.pressButton()
+  })
+
+  buttonDarkMode.addEventListener('click', () => {
+    changeMode()
+    sounds.pressButton()
+  })
+
 }
-
-
-

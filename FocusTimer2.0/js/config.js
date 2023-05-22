@@ -17,6 +17,9 @@ export {
   svgFireOn,
   minutesDisplay,
   secondsDisplay,
+  buttonLightMode,
+  buttonDarkMode,
+  twodots
 }
 
 const buttonPlay = document.querySelector('.play')
@@ -27,6 +30,7 @@ const buttonForest = document.querySelector('.forest')
 const buttonRain = document.querySelector('.rain')
 const buttonCoffeeshop = document.querySelector('.coffeeshop')
 const buttonFire = document.querySelector('.fire')
+
 const svgForestOff = document.querySelector('.forestOff')
 const svgForestOn = document.querySelector('.forestOn')
 const svgRainOff = document.querySelector('.rainOff')
@@ -35,5 +39,10 @@ const svgCoffeeshopOff = document.querySelector('.coffeeshopOff')
 const svgCoffeeshopOn = document.querySelector('.coffeeshopOn')
 const svgFireOff = document.querySelector('.fireOff')
 const svgFireOn = document.querySelector('.fireOn')
+
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
+
+const buttonLightMode = document.querySelector('.lightmode')
+const buttonDarkMode = document.querySelector('.darkmode')
+const twodots = document.querySelector('.twodots')
